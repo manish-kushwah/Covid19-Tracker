@@ -2,20 +2,39 @@
   text-align: center;
 }
 
+header {
+  text-align: left;
+  padding-left: 20px;
+  background-color: white !important;
+  color: #636262 !important;
+}
+header svg {
+  vertical-align: bottom;
+}
+
+.badge {
+  margin-bottom: 3px;
+}
+
+.badge .MuiBadge-badge {
+  height: 17px !important;
+  padding: 0px 8px !important;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-body {
+  background-color: whitesmoke;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #058aca;
 }
 
 .App-link {
@@ -32,5 +51,5 @@
 }
 
 .Welcome-text {
-  color: #30bce2;
+  color: whitesmoke;
 }

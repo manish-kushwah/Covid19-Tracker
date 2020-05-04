@@ -1,0 +1,21 @@
+.container {
+  margin: 30px 0;
+}
+
+.card {
+  margin: 0 1% !important;
+}
+.cardGrid {
+  margin: 0 !important;
+}
+.cases {
+  border-bottom: 10px solid rgba(30, 64, 93, 0.925);
+}
+
+.recovered {
+  border-bottom: 10px solid rgba(115, 136, 81, 0.966);
+}
+
+.deaths {
+  border-bottom: 10px solid #9e073f;
+}

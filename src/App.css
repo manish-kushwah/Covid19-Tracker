@@ -8,17 +8,9 @@ header {
   background-color: white !important;
   color: #636262 !important;
 }
+
 header svg {
   vertical-align: bottom;
-}
-
-.badge {
-  margin-bottom: 3px;
-}
-
-.badge .MuiBadge-badge {
-  height: 17px !important;
-  padding: 0px 8px !important;
 }
 
 .App-logo {
@@ -41,6 +33,15 @@ header svg {
   color: #61dafb;
 }
 
+.badge {
+  margin-bottom: 3px;
+}
+
+.badge .MuiBadge-badge {
+  height: 17px !important;
+  padding: 0px 8px !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -48,8 +49,4 @@ header svg {
   to {
     transform: rotate(360deg);
   }
-}
-
-.Welcome-text {
-  color: whitesmoke;
 }

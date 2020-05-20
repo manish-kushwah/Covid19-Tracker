@@ -4,31 +4,33 @@
 }
 
 .datehead {
-  background-color: white;
-  border: 0 solid lightgray;
-  padding: 2px 12px 2px 12px;
-  color: black;
+  background-color: rgb(253, 253, 253);
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  color: #6c757d;
   display: block;
   border-radius: 15px;
   font-size: 15px;
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.1);
 }
 
 .card {
   margin: 1% 1% !important;
+  border-radius: 11px !important;
+  box-shadow: 15px 15px 60px rgba(55, 84, 128, 0.1),
+    -20px -20px 60px rgba(255, 255, 255, 0.7),
+    2px 2px 34px rgb(255, 255, 255, 0.5) !important;
+  background-color: rgb(252, 252, 252) !important;
 }
 .cardGrid {
   margin: 0 !important;
-  padding-top: 15px;
-}
-.cases {
-  background-color: #06f5f5 !important;
+  padding-top: 25px;
 }
 
-.recovered {
-  background-color: #75ff1f !important;
+.cardContent {
+  padding: 16px !important;
 }
 
-.deaths {
-  background-color: #80808036 !important;
+.cardBottomText {
+  margin-top: 10px !important;
+  font-size: 13px !important;
 }

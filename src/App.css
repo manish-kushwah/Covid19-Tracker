@@ -5,8 +5,9 @@
 header {
   text-align: left;
   padding-left: 20px;
-  background-color: white !important;
+  background-color: rgb(249, 249, 249) !important;
   color: #636262 !important;
+  box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.3) !important;
 }
 
 header svg {
@@ -19,7 +20,8 @@ header svg {
 }
 
 .App-body {
-  background-color: whitesmoke;
+  -webkit-tap-highlight-color: transparent;
+  background-color: rgb(247, 247, 247);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +29,7 @@ header svg {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #058aca;
+  font-family: "ABeeZee", sans-serif;
 }
 
 .App-link {
@@ -49,4 +52,8 @@ header svg {
   to {
     transform: rotate(360deg);
   }
+}
+
+.MuiTypography-root {
+  font-family: "ABeeZee", sans-serif !important;
 }

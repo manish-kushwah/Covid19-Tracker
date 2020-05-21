@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { getResponse, getDailyIncrease } from "./api"; //it will search for index file and fetch it automatically
 import { Cards, Chart, CountryTable } from "./components/export";
-import { AppBar, Typography, Badge } from "@material-ui/core";
-import { Poll } from "@material-ui/icons";
+import { AppBar, Typography } from "@material-ui/core";
 
 function App() {
   const [data, setData] = useState({});
@@ -25,11 +24,9 @@ function App() {
     <div className="App">
       <div>
         <AppBar position="static">
-          <Typography variant="h6">
-            <Poll fontSize="large" />
-            &nbsp;COVID&nbsp;&nbsp;&nbsp;
-            <Badge className="badge" badgeContent={19} color="secondary" />
-            &nbsp;&nbsp;&nbsp;STATS
+          <Typography variant="h6" className="brand-logo">
+            <img src="../../logo192.png" alt="" />
+            &nbsp;COVID<span>19</span>&nbsp;STATS
           </Typography>
         </AppBar>
       </div>

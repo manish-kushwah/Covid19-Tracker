@@ -1,6 +1,6 @@
 import React from "react";
 
-const countrySelector = () => {
+const countryTable = () => {
   return (
     <div>
       <h1>Country Table Coming Soon</h1>
@@ -8,4 +8,4 @@ const countrySelector = () => {
   );
 };
 
-export default countrySelector;
+export default countryTable;

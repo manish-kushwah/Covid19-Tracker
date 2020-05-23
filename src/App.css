@@ -19,15 +19,6 @@ header {
   color: #28a745;
 }
 
-header svg {
-  vertical-align: bottom;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-body {
   -webkit-tap-highlight-color: transparent;
   background-color: rgb(247, 247, 247);
@@ -43,24 +34,6 @@ header svg {
 
 .App-link {
   color: #61dafb;
-}
-
-.badge {
-  margin-bottom: 3px;
-}
-
-.badge .MuiBadge-badge {
-  height: 17px !important;
-  padding: 0px 8px !important;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .MuiTypography-root {

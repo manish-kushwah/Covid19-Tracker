@@ -24,6 +24,7 @@
 .cardGrid {
   margin: 0 !important;
   padding-top: 25px;
+  display: inline-flex;
 }
 
 .cardContent {

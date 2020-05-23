@@ -24,7 +24,7 @@ const MyGrid = styled(({ color, ...other }) => <Grid {...other} />)({
 
 const cards = ({ data: { cases, recovered, deaths, updated } }) => {
   if (!cases) {
-    return "loading...";
+    return "";
   }
   return (
     <React.Fragment>

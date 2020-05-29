@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { getResponse, getDailyIncrease } from "./api"; //it will search for index file and fetch it automatically
+import { getResponse, getDailyIncrease, getCountryData } from "./api"; //it will search for index file and fetch it automatically
 import { Cards, Chart, CountryTable, Skeleton } from "./components/export";
 import { AppBar, Typography } from "@material-ui/core";
 
@@ -8,6 +8,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({});
   const [dailyData, setDailyData] = useState([]);
+  const [countryData, setCountryData] = useState([]);
 
   useEffect(() => {
     setLoading(true);
@@ -22,6 +23,12 @@ function App() {
       setDailyData(await getDailyIncrease());
     })();
   }, [dailyData.date]);
+
+  useEffect(() => {
+    (async function fetchCountryData() {
+      setCountryData(await getCountryData());
+    })();
+  }, [countryData.updated]);
 
   return (
     <div className="App">
@@ -38,7 +45,7 @@ function App() {
         <div className="App-body">
           <Cards data={data} />
           <Chart data={dailyData} />
-          <CountryTable />
+          <CountryTable data={countryData} />
         </div>
       )}
     </div>

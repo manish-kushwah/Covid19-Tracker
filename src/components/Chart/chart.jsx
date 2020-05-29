@@ -28,7 +28,7 @@ const titleStyles = {
   title: {
     textAlign: "center",
     width: "100%",
-    margin: "10px 0px",
+    margin: "15px 0px",
   },
 };
 const Text = withStyles(titleStyles)((props) => {
@@ -115,7 +115,7 @@ const Graph = (props) => {
           <ValueAxis />
 
           <LineSeries
-            name="Positive"
+            name="Confirmed"
             valueField="cases"
             argumentField="date"
             seriesComponent={Line}
@@ -139,7 +139,7 @@ const Graph = (props) => {
             labelComponent={Label}
           />
           <Title
-            text="Corona virus spread worldwide\nCases increase per week worldwide(last 15 week)"
+            text="Corona virus spread worldwide\nCases increase per week (worldwide)"
             textComponent={Text}
           />
           <Animation />

@@ -1,0 +1,23 @@
+.todayCases {
+  font-size: 0.7rem;
+  color: #007bff;
+}
+
+.todayDeaths {
+  font-size: 0.7rem;
+  color: #ff073a;
+}
+
+tbody > tr > th {
+  font-weight: bold !important;
+}
+
+thead > tr > th {
+  background: rgba(108, 117, 125, 0.0627451);
+  font-weight: bold !important;
+}
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 3px 4px !important;
+}

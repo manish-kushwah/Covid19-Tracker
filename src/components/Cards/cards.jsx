@@ -3,10 +3,9 @@ import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import cx from "classnames";
 import { styled } from "@material-ui/core/styles";
-
 import styles from "./cards.module.css";
 
-//Gradient color style
+//Text color for text inside cards
 const MyGrid = styled(({ color, ...other }) => <Grid {...other} />)({
   color: (props) => {
     switch (props.color) {
@@ -43,18 +42,19 @@ const cards = ({ data: { cases, recovered, deaths, updated } }) => {
           <Grid
             component={Card}
             align="left"
+            item={true}
             xs={12}
             md={3}
             className={cx(styles.card)}
           >
             <MyGrid color="blue">
               <CardContent className={styles.cardContent}>
-                <Typography gutterBottom>Positive</Typography>
+                <Typography gutterBottom>Confirmed</Typography>
                 <Typography variant="h5">
                   <CountUp start={0} end={cases} duration={2.5} separator="," />
                 </Typography>
                 <Typography className={styles.cardBottomText}>
-                  Total number of positive cases of covid-19
+                  Total number of confirmed cases of covid-19
                 </Typography>
               </CardContent>
             </MyGrid>
@@ -62,6 +62,7 @@ const cards = ({ data: { cases, recovered, deaths, updated } }) => {
           <Grid
             component={Card}
             align="left"
+            item={true}
             xs={12}
             md={3}
             className={cx(styles.card)}
@@ -78,7 +79,7 @@ const cards = ({ data: { cases, recovered, deaths, updated } }) => {
                   />
                 </Typography>
                 <Typography className={styles.cardBottomText}>
-                  Total number of recovery cases of covid-19
+                  Total number of recovered cases of covid-19
                 </Typography>
               </CardContent>
             </MyGrid>
@@ -86,6 +87,7 @@ const cards = ({ data: { cases, recovered, deaths, updated } }) => {
           <Grid
             component={Card}
             align="left"
+            item={true}
             xs={12}
             md={3}
             className={cx(styles.card)}
@@ -102,7 +104,7 @@ const cards = ({ data: { cases, recovered, deaths, updated } }) => {
                   />
                 </Typography>
                 <Typography className={styles.cardBottomText}>
-                  Total number of death cases from covid-19
+                  Total number of deaths from covid-19
                 </Typography>
               </CardContent>
             </MyGrid>

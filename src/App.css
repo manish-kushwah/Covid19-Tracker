@@ -39,3 +39,16 @@ header {
 .MuiTypography-root {
   font-family: "ABeeZee", sans-serif !important;
 }
+
+.MuiTableCell-root {
+  color: #6c757d !important;
+  line-height: 1.73 !important;
+  font-family: "ABeeZee", sans-serif !important;
+  border-bottom: 1px solid rgba(235, 235, 235, 1) !important;
+  border-radius: 9px;
+  padding: 6px 19px 6px 12px !important;
+}
+
+.MuiTableSortLabel-active {
+  color: #6c757d !important;
+}

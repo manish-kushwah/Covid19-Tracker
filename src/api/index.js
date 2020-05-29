@@ -17,22 +17,16 @@ export const getDailyIncrease = async () => {
     const { data } = await axios.get(`${url}/historical?lastdays=119`);
 
     let modifiedData = {};
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-
-    const yesterdayString = `${
-      yesterday.getMonth() + 1
-    }/${yesterday.getDate()}/${yesterday.getFullYear() % 2000}`;
-
-    let currDay = new Date().getDay();
-    if (data[0].timeline.cases.hasOwnProperty(yesterdayString)) currDay -= 1;
-    else currDay -= 2;
+    let currentDay = Object.keys(data[0].timeline.cases)
+      .map((e) => new Date(e))
+      .reduce((acc, curr) => (acc > curr ? acc : curr))
+      .getDay();
 
     data.forEach(function (item) {
       for (let prop in item.timeline.cases) {
         const date = new Date(prop);
         const newDate = new Date(
-          date.setDate(date.getDate() - date.getDay() + currDay)
+          date.setDate(date.getDate() - date.getDay() + currentDay)
         );
 
         if (modifiedData.hasOwnProperty(prop)) {
@@ -57,5 +51,27 @@ export const getDailyIncrease = async () => {
     });
 
     return Object.values(modifiedData);
+  } catch (error) {}
+};
+
+export const getCountryData = async () => {
+  try {
+    const { data } = await axios.get(`${url}/countries?sort=cases`);
+
+    let countryData = data.map((c) => ({
+      country: c.country,
+      cases: c.cases,
+      todayCases: c.todayCases,
+      deaths: c.deaths,
+      todayDeaths: c.todayDeaths,
+      recovered: c.recovered,
+      active: c.active,
+      critical: c.critical,
+      population: c.population,
+      continent: c.continent,
+      updated: c.updated,
+    }));
+
+    return countryData;
   } catch (error) {}
 };

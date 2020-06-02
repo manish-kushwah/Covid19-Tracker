@@ -7,7 +7,34 @@ header {
   padding-left: 20px;
   background-color: rgb(249, 249, 249) !important;
   color: #636262 !important;
-  box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer {
+  padding: 0.8rem 2rem;
+  position: "absolute";
+  text-align: "center";
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #868e96 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  background-color: #212529;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+  color: inherit;
+  vertical-align: middle !important;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: whitesmoke;
 }
 
 .brand-logo > img {
@@ -47,8 +74,19 @@ header {
   border-bottom: 1px solid rgba(235, 235, 235, 1) !important;
   border-radius: 9px;
   padding: 6px 19px 6px 12px !important;
+  cursor: pointer;
 }
 
 .MuiTableSortLabel-active {
   color: #6c757d !important;
+}
+
+/* Bottom row of Graph */
+#bottom-axis-container .Component-root-237 {
+  letter-spacing: -0.03rem;
+}
+
+/* Parent div of table */
+.MuiTableContainer-root {
+  overflow-x: initial !important;
 }

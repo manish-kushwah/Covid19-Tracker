@@ -13,8 +13,14 @@ tbody > tr > th {
 }
 
 thead > tr > th {
-  background: rgba(108, 117, 125, 0.0627451);
+  background: #f6f6f7;
   font-weight: bold !important;
+  position: sticky;
+  top: 5px;
+}
+
+thead > tr > th:hover {
+  background: rgba(108, 117, 125, 0.12549);
 }
 
 table {

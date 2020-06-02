@@ -14,7 +14,7 @@ export const getResponse = async () => {
 
 export const getDailyIncrease = async () => {
   try {
-    const { data } = await axios.get(`${url}/historical?lastdays=119`);
+    const { data } = await axios.get(`${url}/historical?lastdays=126`);
 
     let modifiedData = {};
     let currentDay = Object.keys(data[0].timeline.cases)
@@ -44,7 +44,7 @@ export const getDailyIncrease = async () => {
               cases: item.timeline.cases[prop],
               deaths: item.timeline.deaths[prop],
               recovered: item.timeline.recovered[prop],
-              date: prop,
+              date: new Date(prop.toString()).toDateString().substring(4, 10),
             };
         }
       }

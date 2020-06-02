@@ -48,6 +48,25 @@ function App() {
           <CountryTable data={countryData} />
         </div>
       )}
+      <div className="container">
+        <footer position="static" className="footer">
+          <Typography variant="caption" align="center">
+            © Copyright 2020
+          </Typography>
+          <Typography variant="caption" align="center">
+            A humble effort by <b>Manish</b>
+          </Typography>
+          <Typography variant="caption" align="center">
+            <a href="https://github.com/manish-kushwah/">
+              <i className="fab fa-github-square social-icon" />
+            </a>
+            &nbsp;
+            <a href="https://www.linkedin.com/in/manishkushwah758/">
+              <i className="fab fa-linkedin social-icon" />
+            </a>
+          </Typography>
+        </footer>
+      </div>
     </div>
   );
 }

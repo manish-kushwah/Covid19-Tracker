@@ -14,7 +14,7 @@ import {
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
-import styles from "../CountryTable/countryTable.module.css";
+import styles from "./countryTable.module.css";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {

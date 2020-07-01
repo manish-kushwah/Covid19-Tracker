@@ -191,6 +191,8 @@ const CountryTable = ({ data }) => {
     setOrderBy(property);
   };
 
+  if (!data.length) return "";
+
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>

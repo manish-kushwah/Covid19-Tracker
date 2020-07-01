@@ -52,17 +52,6 @@ const SkeletonCard = () => {
       <div>
         <Skeleton width={855} height={500} style={{ margin: "30px 0px" }} />
       </div>
-
-      <div className="makeStyles-root-72">
-        <div>
-          <div className="makeStyles-root-76">
-            <Skeleton width={855} height={64} block={false} />
-          </div>
-          <div className="MuiTableContainer-root">
-            <Skeleton width={855} height={1364} block={false} />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
